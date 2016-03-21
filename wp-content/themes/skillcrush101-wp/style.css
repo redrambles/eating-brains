@@ -417,6 +417,17 @@ table {
 }
 
 /*--------------------------------------------------------------
+# Layout
+--------------------------------------------------------------*/
+.container {
+		width: 78%;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+.one-half {
+	width: 48%;
+}
+/*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 button,
@@ -558,8 +569,8 @@ a:active {
 .main-navigation {
 	clear: both;
 	display: block;
-	float: left;
-	width: 100%;
+	/*float: left;
+	width: 100%;*/
 }
 
 .main-navigation ul {
@@ -709,13 +720,13 @@ a:active {
 .alignleft {
 	display: inline;
 	float: left;
-	margin-right: 1.5em;
+	margin-right: 2%;
 }
 
 .alignright {
 	display: inline;
 	float: right;
-	margin-left: 1.5em;
+	margin-left: 2%;
 }
 
 .aligncenter {
@@ -769,6 +780,138 @@ a:active {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Front Page
+--------------------------------------------------------------*/
+.home {
+	font-family: 'Source Sans Pro', sans-serif;
+}
+header.front-top-image {
+	background: url("img/hero.png") no-repeat center center / cover;
+	min-height: 800px;
+}
+header > .container {
+    margin-top: 60px;
+}
+.site-title a{
+	text-decoration: none;
+	font-family: 'Lora', serif;
+	font-size: 1.2em;
+	color: #CACDA5;
+}
+.site-branding {
+	float: left;
+	width: 50%;
+	font-family: 'Lora', serif;
+	font-size: 30px;
+}
+.home .main-navigation {
+  padding: 22px 0 14px 0;
+  display: block;
+  float: right;
+	clear: none;
+	font-size: 18px;
+}
+.home .nav-menu li a {
+    color: #CACDA5;
+    margin-right: 30px;
+}
+p.site-description {
+  font-size: 72px;
+  line-height: 110%;
+	color: #BCBCBC;
+	}
+span.hi {
+  color: #272B2C;
+	font-weight: bold;
+}
+.description {
+	clear: both;
+	padding-top: 40px;
+}
+#about, #skills, #contact {
+	padding: 80px 0px;
+}
+.home .about-text h2 {
+	margin-bottom: 20px;
+	font-size: 36px;
+}
+.home .about-text .entry-content {
+	margin-top: 0px;
+	color: #C7C7C7;
+	font-size: 21px;
+}
+.home .about-title {
+	font-family: 'Lora', serif;
+}
+#skills {
+	background-color: #f9ceb7;
+	min-height: 500px;
+}
+.skills-front {
+	list-style-type: none;
+	padding: 0;
+	margin: 10px 0px 0px 0px;
+}
+.skills-image i {
+	color: #c49075;
+}
+.individual-skill {
+	width: 28%;
+	margin-right: 7%;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center;
+}
+.skills-text a {
+	text-decoration: none;
+}
+.skills-text {
+	color: #ac9082;
+	font-family: 'Lora', serif;
+	font-size: 18px;
+	line-height: 1.7;
+}
+.skills-text h3 {
+	color: #1d181a;
+	font-size: 24px;
+}
+.individual-skill:last-of-type {
+	margin-right: 0px;
+}
+#contact {
+	min-height: 500px;
+	background-color: #EBEBEB;
+}
+.contact-image img {
+	border: 12px solid white;
+}
+.cta {
+	font-family: 'Lora', serif;
+	font-size: 36px
+}
+.cta_sub {
+	font-size: 32px;
+}
+.social-title {
+	font-size: 29px;
+}
+.social-icons {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.social-icons li {
+	display: inline-block;
+	margin-right: 50px;
+}
+.social-icons li:last-of-type {
+	margin-right: none;
+}
+.social-icons li a {
+	color: #c49075;
+}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

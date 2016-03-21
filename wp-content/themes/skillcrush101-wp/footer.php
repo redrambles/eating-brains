@@ -12,14 +12,19 @@
 ?>
 
 	</div><!-- #content -->
+	
+	<?php if ( !is_front_page() ) : ?>
+		
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'skillcrush101-wp' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'skillcrush101-wp' ), 'WordPress' ); ?></a>
+				<span class="sep"> | </span>
+				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'skillcrush101-wp' ), 'skillcrush101-wp', '<a href="http://skillcrush.com" rel="designer">Caro Griffin & Ann Cascarano</a>' ); ?>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'skillcrush101-wp' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'skillcrush101-wp' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'skillcrush101-wp' ), 'skillcrush101-wp', '<a href="http://skillcrush.com" rel="designer">Caro Griffin & Ann Cascarano</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<?php endif; ?>
+	
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
