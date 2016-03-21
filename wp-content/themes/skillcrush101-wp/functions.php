@@ -111,10 +111,32 @@ function skillcrush101_wp_widgets_init() {
 add_action( 'widgets_init', 'skillcrush101_wp_widgets_init' );
 
 /**
+ * Custom Post Types - Probably better off in plugin
+ */
+function create_custom_post_types() {
+
+	register_post_type('skills',
+		array(
+			// 'supports' => $supports,
+			'labels' => array(
+				'name' => _( 'Skills' ),
+				'singular_name' => _( 'Skill' )
+				),
+			'public' => true,
+			'has_archive' => false,
+			)
+	 );
+}
+// Hook this custom post type function into the theme
+add_action( 'init', 'create_custom_post_types' );
+
+/**
  * Enqueue scripts and styles.
  */
 function skillcrush101_wp_scripts() {
 	wp_enqueue_style( 'skillcrush101-wp-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css?family=Lora:400,700|Source+Sans+Pro');
+	wp_enqueue_style('respite-font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
 	wp_enqueue_script( 'skillcrush101-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
