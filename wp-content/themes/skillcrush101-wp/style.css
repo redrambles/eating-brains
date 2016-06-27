@@ -420,7 +420,7 @@ table {
 # Layout
 --------------------------------------------------------------*/
 .container {
-		width: 78%;
+		width: 90%;
     max-width: 1500px;
     margin: 0 auto;
 }
@@ -792,35 +792,39 @@ header.front-top-image {
 	min-height: 800px;
 }
 header > .container {
-    margin-top: 60px;
+    margin-top: 20px;
 }
 .site-title a{
 	text-decoration: none;
 	font-family: 'Lora', serif;
 	font-size: 1.2em;
-	color: #CACDA5;
+	color: #BBC085;
 }
 .site-branding {
 	float: left;
 	width: 50%;
 	font-family: 'Lora', serif;
-	font-size: 30px;
+	font-size: 25px;
+	font-weight: 700;
 }
 .home .main-navigation {
-  padding: 22px 0 14px 0;
+  padding: 35px 0 14px 0;
   display: block;
   float: right;
 	clear: none;
 	font-size: 18px;
 }
 .home .nav-menu li a {
-    color: #CACDA5;
-    margin-right: 30px;
+		text-transform: uppercase;
+    color: #828282;
+    margin-right: 55px;
 }
 p.site-description {
+	font-family: Lora, serif;
+	font-weight: 700;
   font-size: 72px;
   line-height: 110%;
-	color: #BCBCBC;
+	color: #9b9b9b;
 	}
 span.hi {
   color: #272B2C;
@@ -828,7 +832,7 @@ span.hi {
 }
 .description {
 	clear: both;
-	padding-top: 40px;
+	padding-top: 5px;
 }
 #about, #skills, #contact {
 	padding: 80px 0px;
@@ -839,7 +843,7 @@ span.hi {
 }
 .home .about-text .entry-content {
 	margin-top: 0px;
-	color: #C7C7C7;
+	color: #7f7f7f;
 	font-size: 21px;
 }
 .home .about-title {
@@ -887,12 +891,15 @@ span.hi {
 .contact-image img {
 	border: 12px solid white;
 }
-.cta {
+h1.cta {
 	font-family: 'Lora', serif;
-	font-size: 36px
+	font-size: 36px;
+	margin-bottom: 0;
 }
 .cta_sub {
 	font-size: 32px;
+	line-height: 1;
+	margin-top: 0;
 }
 .social-title {
 	font-size: 29px;

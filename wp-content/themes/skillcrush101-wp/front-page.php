@@ -2,15 +2,14 @@
 /**
  * The custom template for the one-page style front page. Kicks in automatically. Booya!
  */
-
 get_header(); ?>
 
 	<div id="primary" class="content-area lander-page">
 		<main id="main" class="site-main" role="main">
 
 			<section id="about">
-				<div class="container about-text"> 
-					<?php 
+				<div class="container about-text">
+					<?php
 						$query = new WP_Query( 'pagename=about' );
 						// The Loop
 						if ( $query->have_posts() ) {
@@ -31,14 +30,14 @@ get_header(); ?>
 			<section id="skills">
 				<div class="container">
 
-					<?php 
+					<?php
             $icon_1 = get_field('icon_1');
 						$icon_2 = get_field('icon_2');
 						$icon_3 = get_field('icon_3');
-						//echo get_post_field( 'post_content', $frontpage_id ); 
-						
+						//echo get_post_field( 'post_content', $frontpage_id );
+
           ?>
-					
+
 					<?php $args = array (
 						'post_type' => 'skills',
 						'posts_per_page' => 3,
@@ -46,19 +45,19 @@ get_header(); ?>
 					);
 					$skills = new WP_Query($args);?>
 
-					<ul class="skills-front"> 
-					<?php while ( $skills->have_posts() ) : $skills->the_post();  
+					<ul class="skills-front">
+					<?php while ( $skills->have_posts() ) : $skills->the_post();
 						$icon = get_field('icon');
 						$title = get_field('title');
 						$text = get_field('icon_text');
-					?>             
+					?>
 							<li class="individual-skill">
 							    <?php the_post_thumbnail('skills-image'); ?>
 							    <figure class="skills-image">
                     <i class="fa <?php echo $icon; ?> fa-5x"></i>
 							    </figure>
 							    </a>
-							    <aside class="skills-text">                    
+							    <aside class="skills-text">
   							    <!-- <a href="<?php //get_permalink(); ?>" title="Learn more about <?php //echo $title; ?>"> -->
     				           <h3 class="skills-title"><?php echo $title; ?></h3>
 										<!-- </a> -->
@@ -71,10 +70,10 @@ get_header(); ?>
           </ul>
 				</div>
 			</section>
-      
+
 			<section id="contact">
 				<div class="container">
-					<?php 
+					<?php
 					$query = new WP_Query('pagename=contact');
 					// The Loop
 					if ( $query->have_posts() ) {
