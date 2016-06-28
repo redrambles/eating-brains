@@ -43,11 +43,13 @@
 			<?php
 			if ( is_front_page() ) : ?>
 			<div class="description">
-			<?php	$description = get_bloginfo( 'description', 'display' );
-				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><span class="hi">Hi, </span><?php echo $description; /* WPCS: xss ok. */ ?></p>
 				<?php
-				endif; 
+					$greeting = get_field('greeting');
+					$description = get_bloginfo( 'description', 'display' );
+				if ( $description || is_customize_preview() ) : ?>
+					<p class="site-description"><span class="hi"><?php echo $greeting; ?></span> <?php echo $description; /* WPCS: xss ok. */ ?></p>
+				<?php
+				endif;
 				endif; ?>
 			</div>
 		</div><!-- .container -->
