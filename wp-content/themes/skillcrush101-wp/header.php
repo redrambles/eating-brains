@@ -47,7 +47,7 @@
 					$greeting = get_field('greeting');
 					$description = get_bloginfo( 'description', 'display' );
 				if ( $description || is_customize_preview() ) : ?>
-					<p class="site-description"><span class="hi"><?php echo $greeting; ?></span> <?php echo $description; /* WPCS: xss ok. */ ?></p>
+					<p class="site-description"><span class="greeting"><?php echo $greeting; ?></span> <?php echo $description; /* WPCS: xss ok. */ ?></p>
 				<?php
 				endif;
 				endif; ?>
